@@ -1,7 +1,14 @@
 package cn.edu.njnu.pojo;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Exam implements Serializable {
 
     private Integer paperId;//卷子Id
@@ -15,59 +22,4 @@ public class Exam implements Serializable {
     private String answer;//答案
     private Float point;//分数
 
-    public Integer getPaperId() {
-        return paperId;
-    }
-
-    public void setPaperId(Integer paperId) {
-        this.paperId = paperId;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
-
-    public Float getPoint() {
-        return point;
-    }
-
-    public void setPoint(Float point) {
-        this.point = point;
-    }
 }
