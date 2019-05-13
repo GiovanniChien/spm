@@ -15,8 +15,7 @@ public class Exam implements Serializable {
     private Integer order;//序号
     //双主键 paperId+order
 
-    private String title;//题目
-    private String type;//题型
+    private Integer type;//题型
     private String content;//题目内容
 
     private String answer;//答案

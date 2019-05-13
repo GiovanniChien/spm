@@ -14,7 +14,7 @@ public class message implements Serializable {
 
     private Integer id;
     private User user;//foreign key from user id
-    private String context;//留言内容
+    private String content;//留言内容
     private Date time;//留言时间
 
 }
