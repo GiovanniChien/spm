@@ -25,6 +25,7 @@ public class LoginService {
             result.setType("fail");
             result.setMsg("用户名密码不正确");
         } else {
+            result.setUserId(user.getId());
             result.setUsername(user.getUsername());
             //教师权限
             if (tmp.getPower() == 0) {
@@ -36,6 +37,7 @@ public class LoginService {
                 result.setType("success");
                 result.setPower(1);
                 Course course = courseDao.queryCourseInfoByUserId(tmp.getId());
+                result.setCourse(course);
                 if (course != null) {
                     int status = course.getStatus();
                     if (status == 0) {

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "宋体";
+    font-size: 16px;
+}
+
+.teacher-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.teacher-profile {
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 210px;
+    height: 30px;
+    transition-duration: 1s;
+}
+
+.teacher-profile:hover {
+    right: 0;
+}
+
+.teacher-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: greenyellow;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 15px;
+    display: table-cell;
+    vertical-align: center;
+    text-align: center;
+}
+
+.teacher-icon {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background: greenyellow;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 15px;
+    display: table-cell;
+    vertical-align: center;
+    text-align: center;
+}
+
+.teacher-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 30px;
+}
+
+.teacher-class {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 90%;
+    height: 40px;
+}
+
+.teacher-class .pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 60px;
+}
+
+.teacher-class .name {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    width: 100%;
+    height: 60px;
+}
+
+.teacher-menu {
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    width: 150px;
+}
+
+.teacher-menu ul {
+    list-style: none;
+}
+
+.teacher-menu ul li {
+    background: lightgreen;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    position: relative;
+}
+
+a {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green;
+    background: white;
+}
+
+.teacher-menu ul li ul {
+    display: none;
+    top: 0;
+    width: 150px;
+    position: absolute;
+    left: 150px;
+    opacity: 0.75;
+}
+
+.teacher-menu ul li:hover ul {
+    display: block;
+}
+
+.teacher-main {
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    width: 60%;
+    border: solid 1px black;
+}

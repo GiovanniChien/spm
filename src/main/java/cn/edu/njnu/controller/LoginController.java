@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class LoginController {
@@ -19,11 +20,11 @@ public class LoginController {
     private LoginService service;
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String signIn(User user,Model model){
+    public String signIn(User user, HttpSession session,Model model){
         LoginResult result = service.signIn(user);
         if(result.getType().equals("success")){
             result.setUsername(user.getUsername());
-            model.addAttribute("loginResult",result);
+            session.setAttribute("loginResult",result);
             //老师权限，跳转到老师界面
             if(result.getPower()==0){
                 return "teacher";
