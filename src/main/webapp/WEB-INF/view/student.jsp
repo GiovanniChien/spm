@@ -1,4 +1,4 @@
-<!-- <%@ page contentType="text/html;charset=UTF-8" language="java" %> -->
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
     <meta content="text/html;charset=utf-8" />
@@ -7,13 +7,20 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/student.css" />
+    <link
+      rel="stylesheet"
+      href="${pageContext.request.contextPath}/css/student.css"
+    />
+    <script
+      type="text/javascript"
+      src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js"
+    ></script>
   </head>
   <body>
     <div class="student-box">
       <div class="student-class">
         <div class="pic">
-          <img src="../static/image/class_small.jpg" alt="小课程图片" />
+          <img src="${pageContext.request.contextPath}/image/class_small.jpg" alt="小课程图片" />
           <div class="name">软件项目课程管理</div>
         </div>
       </div>
@@ -25,20 +32,20 @@
       <div class="student-menu">
         <ul>
           <li>
-            <a href="#">课程信息</a>
+            <a href="#" id="info">课程信息</a>
             <ul>
-              <li><a href="#">课程内容</a></li>
-              <li><a href="#">课程实践</a></li>
-              <li><a href="#">教学团队</a></li>
+              <li><a href="#" id="content">课程内容</a></li>
+              <li><a href="#" id="practice">课程实践</a></li>
+              <li><a href="#" id="team">教学团队</a></li>
             </ul>
           </li>
-          <li><a href="#">网上测试</a></li>
-          <li><a href="#">资源下载</a></li>
-          <li><a href="#">行业信息</a></li>
-          <li><a href="#">联系我们</a></li>
+          <li><a href="${pageContext.request.contextPath}/student/test" id="test">网上测试</a></li>
+          <li><a href="${pageContext.request.contextPath}/resource">资源下载</a></li>
+          <li><a href="#" id="work">行业信息</a></li>
+          <li><a href="#" id="contact">联系我们</a></li>
         </ul>
       </div>
-      <div class="student-main">
+      <div class="student-main" id="student-main">
         <p>
           &emsp;&emsp;随着信息技术的飞速发展，软件产品的规模也越来越庞大，各软件企业都在积极将软件项目管理引入到开发活动中，对软件项目实行有效的管理。软件项目管理是为了使软件项目能够按照预定的成本、进度、质量顺利完成，而进行分析和管理的活动。另外，进行软件项目管理有利于将个人开发能力转化成企业的开发能力，企业的软件开发能力越高，表明这个企业的软件生产越趋向于成熟，企业越能够稳定发展。特别是在当今的软件项目中，项目管理的质量与软件产品的质量有着直接的对应关系，因此，提高项目管理的能力对于软件组织生产力的提高是极为重要的。
         </p>
@@ -58,5 +65,6 @@
         </p>
       </div>
     </div>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/student.js"></script>
   </body>
 </html>

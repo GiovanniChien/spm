@@ -7,13 +7,16 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/teacher.css" />
+    <link
+      rel="stylesheet"
+      href="${pageContext.request.contextPath}/css/teacher.css"
+    />
   </head>
   <body>
     <div class="teacher-box">
       <div class="teacher-class">
         <div class="pic">
-          <img src="../static/image/class_small.jpg" alt="小课程图片" />
+          <img src="${pageContext.request.contextPath}/image/class_small.jpg" alt="小课程图片" />
           <div class="name">软件项目课程管理</div>
         </div>
       </div>
@@ -24,28 +27,9 @@
       </div>
       <div class="teacher-menu">
         <ul>
-          <li><a href="#">选课管理</a>
-          <ul>
-            <li><a href="#">查看选课</a></li>
-            <li><a href="#">选课设置</a></li>
-          </ul>
-          </li>
-          <li><a href="#">资源管理</a>
-          <ul>
-            <li><a href="#">资源上传</a></li>
-            <li><a href="#">资源下载</a></li>
-            <li><a href="#">资源删除</a></li>
-          </ul>
-          </li>
-          <li><a href="#">成绩管理</a>
-          <ul>
-            <li><a href="#">成绩导入</a></li>
-            <li><a href="#">成绩计算</a></li>
-            <li><a href="#">成绩分析</a></li>
-            <li><a href="#">成绩显示</a></li>
-            <li><a href="#">成绩通知</a></li>
-          </ul>
-          </li>
+          <li><a href="#">选课管理</a></li>
+          <li><a href="resource.jsp">资源管理</a></li>
+          <li><a href="score.jsp">成绩管理</a></li>
         </ul>
       </div>
       <div class="teacher-main">

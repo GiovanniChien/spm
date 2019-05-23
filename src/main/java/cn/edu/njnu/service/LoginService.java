@@ -25,7 +25,7 @@ public class LoginService {
             result.setType("fail");
             result.setMsg("用户名密码不正确");
         } else {
-            result.setUserId(user.getId());
+            result.setUserId(tmp.getId());
             result.setUsername(user.getUsername());
             //教师权限
             if (tmp.getPower() == 0) {
