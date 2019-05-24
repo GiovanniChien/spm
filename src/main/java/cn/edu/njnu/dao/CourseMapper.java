@@ -4,6 +4,8 @@ import cn.edu.njnu.pojo.Course;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Component
 public interface CourseMapper {
 
@@ -14,4 +16,12 @@ public interface CourseMapper {
 
     @Transactional
     void updateDailyGrade(Course course);
+
+    List<Course> queryAllByStatus(Integer status);
+
+    @Transactional
+    void updateStatusById(Integer id);
+
+    @Transactional
+    void deleteCourseById(Integer id);
 }

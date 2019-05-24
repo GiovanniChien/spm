@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
-    <link rel="stylesheet" href="../static/css/class.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/class.css" />
     <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js"></script>
   </head>
   <body>

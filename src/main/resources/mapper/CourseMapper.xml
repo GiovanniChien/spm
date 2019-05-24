@@ -37,4 +37,19 @@
         update course set daily_grade = #{dailyGrade} where id = #{id}
     </update>
 
+    <!--List<Course> queryAllByStatus(Integer status);-->
+    <select id="queryAllByStatus" resultMap="myCourse">
+        select * from course left outer join user on student_id = user.id where status = #{status}
+    </select>
+
+    <!--void updateStatusById(Integer id);-->
+    <update id="updateStatusById">
+        update course set status = 1 where id = #{id}
+    </update>
+
+    <!--void deleteCourseById(Integer id);-->
+    <delete id="deleteCourseById">
+        delete from course where id = #{id}
+    </delete>
+
 </mapper>

@@ -47,4 +47,12 @@
         base-package:指定mapper接口所在的包名
     -->
     <mybatis-spring:scan base-package="cn.edu.njnu.dao"/>
+
+    <!--文件上传-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--设置上传文件的最大尺寸为5MB-->
+        <property name="maxUploadSize" value="5242880"/>
+        <!--设置默认编码-->
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
 </beans>

@@ -5,12 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Date;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class File implements Serializable {
+public class MyFile implements Serializable {
 
     private Integer id;
 
@@ -18,6 +17,6 @@ public class File implements Serializable {
     private String realname;//真正的文件名
     private String path;//路径名
 
-    private Date time;//修改时间,mysql用timestamp存,Java用date
+    private String time;//修改时间,mysql用timestamp存,Java用date
 
 }
