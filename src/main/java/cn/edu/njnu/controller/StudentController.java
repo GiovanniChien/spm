@@ -44,4 +44,9 @@ public class StudentController {
         return "student/test";
     }
 
+    @RequestMapping("/grade")
+    public String searchGrade(){
+        return "student/grade";
+    }
+
 }

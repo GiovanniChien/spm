@@ -10,7 +10,7 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     <!--引入数据库配置文件-->
-    <context:property-placeholder location="classpath:config/dbconfig.properties"/>
+    <context:property-placeholder location="classpath:config/dbconfig.properties" ignore-unresolvable="true"/>
     <!--Spring用来控制业务逻辑.数据源、事务控制、aop-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="jdbcUrl" value="${jdbc.url}"/>
@@ -41,6 +41,18 @@
         <property name="configLocation" value="classpath:config/mybatis-config.xml"/>
         <!--mapperLocations:指定mapper配置文件的位置-->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <!--配置pageHelper-->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <value>
+                            reasonable=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
     </bean>
     <!--
         扫描所有的mapper接口,让这些mapper能够自动注入
@@ -54,5 +66,21 @@
         <property name="maxUploadSize" value="5242880"/>
         <!--设置默认编码-->
         <property name="defaultEncoding" value="utf-8"/>
+    </bean>
+
+    <!--引入邮件配置文件-->
+    <context:property-placeholder location="classpath:config/mail.properties" ignore-unresolvable="true"/>
+    <!--配置邮件接口-->
+    <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="${mail.smtp.host}"/>
+        <property name="username" value="${mail.smtp.username}"/>
+        <property name="password" value="${mail.smtp.password}"/>
+        <property name="defaultEncoding" value="${mail.smtp.defaultEncoding}"/>
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+                <prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>
+            </props>
+        </property>
     </bean>
 </beans>

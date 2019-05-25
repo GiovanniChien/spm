@@ -35,13 +35,14 @@
                 </ul>
             </li>
             <li><a href="${pageContext.request.contextPath}/resource/show" id="resource">资源管理</a></li>
-            <li class="last"><a href="#" id="score">成绩管理</a>
+            <li class="last"><a href="${pageContext.request.contextPath}/grade/show" id="score">成绩管理</a>
                 <ul class="sublast">
-                    <li><a href="#" id="import">成绩导入</a></li>
+                    <li><a href="${pageContext.request.contextPath}/grade/show_import" id="import">成绩导入</a></li>
                     <li><a href="#" id="analyse">成绩分析</a></li>
-                    <li><a href="#" id="report">成绩通知</a></li>
+                    <li><a href="${pageContext.request.contextPath}/grade/notice_list" id="report">成绩通知</a></li>
                 </ul>
             </li>
+            <li><a href="${pageContext.request.contextPath}/message/message_board?page=1" id="message_board">留言板</a></li>
         </ul>
     </div>
     <iframe src="${pageContext.request.contextPath}/class/class_info" id="teacher-main">

@@ -24,4 +24,13 @@ public interface CourseMapper {
 
     @Transactional
     void deleteCourseById(Integer id);
+
+    Course queryCourseInfoByUsername(String username);
+
+    @Transactional
+    void updateGradeById(Course course);
+
+    Course queryCourseInfoById(Integer id);
+
+    List<Course> queryCourseInfoByFinalGrade(float finalGrade);
 }

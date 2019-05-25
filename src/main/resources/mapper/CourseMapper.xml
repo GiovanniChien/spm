@@ -27,6 +27,21 @@
         select * from course left outer join user on student_id = user.id where student_id = #{userId};
     </select>
 
+    <!--Course queryCourseInfoByUsername(String username);-->
+    <select id="queryCourseInfoByUsername" resultMap="myCourse">
+        select * from course left outer join user on student_id = user.id where username = #{username}
+    </select>
+
+    <!--Course queryCourseInfoById(Integer id);-->
+    <select id="queryCourseInfoById" resultMap="myCourse">
+        select * from course left outer join user on student_id = user.id where course.id = #{id}
+    </select>
+
+    <!--List<Course> queryCourseInfoByFinalGrade(double finalGrade);-->
+    <select id="queryCourseInfoByFinalGrade" resultMap="myCourse">
+        select * from course left outer join user on student_id = user.id where final_grade &lt; #{finalGrade}
+    </select>
+
     <!--void insertCourse(Course course);-->
     <insert id="insertCourse">
         insert into course(student_id,email,telno,status) values(#{user.id},#{email},#{telno},#{status});
@@ -51,5 +66,12 @@
     <delete id="deleteCourseById">
         delete from course where id = #{id}
     </delete>
+
+    <!--void updateGradeById(Course course);-->
+    <update id="updateGradeById">
+        update course set
+        daily_grade = #{dailyGrade},mid_grade = #{midGrade},final_grade = #{finalGrade},
+        practice_grade = #{practiceGrade},total_grade = #{totalGrade} where id = #{id}
+    </update>
 
 </mapper>
