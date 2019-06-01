@@ -1,0 +1,37 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>成绩查询</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2">成绩查询</th>
+    </tr>
+    <tr>
+        <td>学号</td>
+        <td>${loginResult.username}</td>
+    </tr>
+    <tr>
+        <td>平时成绩</td>
+        <td>${loginResult.course.dailyGrade}</td>
+    </tr>
+    <tr>
+        <td>期中成绩</td>
+        <td>${loginResult.course.midGrade}</td>
+    </tr>
+    <tr>
+        <td>期末成绩</td>
+        <td>${loginResult.course.finalGrade}</td>
+    </tr>
+    <tr>
+        <td>实践成绩</td>
+        <td>${loginResult.course.practiceGrade}</td>
+    </tr>
+    <tr>
+        <td>总成绩</td>
+        <td>${loginResult.course.totalGrade}</td>
+    </tr>
+</table>
+</body>
+</html>
